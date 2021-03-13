@@ -1,1 +1,1 @@
-# open-shift-project
+# openshift-project
