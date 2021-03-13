@@ -1,0 +1,10 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: open-service
+spec:
+  ports:
+    - port: 8080
+      protocol: TCP
+  selector:
+    app: open
