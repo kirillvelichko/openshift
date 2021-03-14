@@ -20,13 +20,15 @@ spec:
               protocol: TCP
           livenessProbe:
             initialDelaySeconds: 60
+            periodSeconds: 10
             timeoutSeconds: 2
             httpGet:
               path: /actuator/health
               port: 8080
               scheme: HTTP
             readinessProbe:
-              initialDelaySeconds: 30
+              initialDelaySeconds: 0
+              periodSeconds: 10
               timeoutSeconds: 1
               tcpSocket:
                 port: 8080
@@ -34,4 +36,4 @@ spec:
     type: RollingUpdate
     rollingUpdate:
       maxUnavailable: 25%
-      maxSurge: 25%
+      maxSurge: 0%
