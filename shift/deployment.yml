@@ -26,12 +26,12 @@ spec:
               path: /actuator/health
               port: 8080
               scheme: HTTP
-            readinessProbe:
-              initialDelaySeconds: 0
-              periodSeconds: 10
-              timeoutSeconds: 1
-              tcpSocket:
-                port: 8080
+          readinessProbe:
+            initialDelaySeconds: 0
+            periodSeconds: 10
+            timeoutSeconds: 1
+            tcpSocket:
+              port: 8080
   strategy:
     type: RollingUpdate
     rollingUpdate:
