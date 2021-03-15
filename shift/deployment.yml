@@ -11,12 +11,17 @@ spec:
     metadata:
       labels:
         app: open
-      annotations:
-        sidecar.istio.io/inject: 'true'
     spec:
       containers:
         - name: open
           image: kirillvelichko/open:latest
+          resources:
+            requests:
+              cpu: 500m
+              memory: 1Gi
+            limits:
+              cpu: 500m
+              memory: 1Gi
           ports:
             - containerPort: 8080
               protocol: TCP
