@@ -1,12 +1,12 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: open-route
+  name: app-route
   annotations:
     haproxy.router.openshift.io/disable_cookies: 'true'
     haproxy.router.openshift.io/balance: roundrobin
 spec:
-  host: open.apps.sandbox-m2.ll9k.p1.openshiftapps.com
+  host: app1.apps.sandbox-m2.ll9k.p1.openshiftapps.com
   to:
     kind: Service
-    name: open-service
+    name: app1-service
