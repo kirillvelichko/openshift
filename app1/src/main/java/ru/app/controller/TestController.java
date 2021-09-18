@@ -11,7 +11,7 @@ import java.util.Random;
 public class TestController {
     private static final Random random = new Random();
 
-    @GetMapping("")
+    @GetMapping("/test")
     public String test() {
         String message = "Test message " + random.nextInt(100);
         log.info(message);
